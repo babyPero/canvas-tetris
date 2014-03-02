@@ -60,7 +60,8 @@ function tick() {
         freeze();
         clearLines();
         if (lose) {
-            newGame();
+           // newGame();    //20140222 start ボタン追加により　コメントアウト 
+	  //init();  //20140222 init 追加したけど、クリアまではよくて、勝手にスタートしてしまうから
             return false;
         }    
         newShape();
@@ -142,7 +143,8 @@ function valid( offsetX, offsetY, newCurrent ) {
     offsetY = currentY + offsetY;
     newCurrent = newCurrent || current;
 
-
+//alert("test");
+//alert(currentX);
 
     for ( var y = 0; y < 4; ++y ) {
         for ( var x = 0; x < 4; ++x ) {
@@ -170,4 +172,4 @@ function newGame() {
     interval = setInterval( tick, 250 );
 }
 
-newGame();
+//newGame();　　//20140222 start ボタン追加により　コメントアウト 
